@@ -5,7 +5,7 @@ metadata:
   name: django-web01
   namespace: default
 spec:
-  replicas: 3
+  replicas: 1
   # 在定义模板的时候必须定义labels,因为Deployment.spec.selector是必须字段,而他又必须和template.labels对应
   selector:
     matchLabels:
@@ -19,10 +19,9 @@ spec:
       containers:
       # containers名字 和svc 和ingress绑定没关系
       - name: django-web01
-        #image: harbor.aircourses.com/jiaminxu/django-web01:v1
         image: harborsh.madserving.com/test/django-demo
         ports:
         - name: http
           containerPort: 8080
       imagePullSecrets:
-        - name: tekton-basic-user-pass-registry
+        - name: harbor-secret
