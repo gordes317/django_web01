@@ -25,4 +25,4 @@ spec:
         - name: http
           containerPort: 8080
       imagePullSecrets:
-        - name: harbor-secret
+        - name: tekton-basic-user-pass-registry
