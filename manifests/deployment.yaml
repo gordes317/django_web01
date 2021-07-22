@@ -20,7 +20,7 @@ spec:
       # containers名字 和svc 和ingress绑定没关系
       - name: django-web01
         #image: harbor.aircourses.com/jiaminxu/django-web01:v1
-        image: harborsh.madserving.com/test/django_demo
+        image: harborsh.madserving.com/test/django-demo
         ports:
         - name: http
           containerPort: 8080
