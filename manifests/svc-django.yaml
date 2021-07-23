@@ -9,6 +9,6 @@ spec:
     app: django-web01
   ports:
   - name: http
-    nodePort: 9527
+    nodePort: 33600
     port: 8080
     targetPort: 8080
